@@ -14,14 +14,15 @@ def POI2(value):
     else:
       print("Your POI is invalid") 
   elif ':' not in value:
-    val2 = int(value)
-    if (val2 > 9):
-      sum2 = val2[0] + val2[1]
-      if [3,6,9] in sum2:
+    val2 = value
+    val3 = int(value)
+    if (val3> 9):
+      sum2 = int(val2[0]) + int(val2[1])
+      if sum2 in [3,6,9]:
         print("Your POI is valid")
       else:
         print("Your POI is invalid")
-    elif [3,6,9] in sum2:
+    elif val3 in [3,6,9]:
       print("Your POI is valid")
     else:
       print("Your POI is invalid") 
@@ -35,5 +36,5 @@ def POI():
     time = input("Enter time(12:00) : ")
     POI2(time)
   else:
-    sys.exit()
+    exit()
 POI()
